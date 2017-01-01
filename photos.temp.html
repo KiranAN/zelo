@@ -1,0 +1,34 @@
+<div>
+	<table class="table table-bordered table-condensed table-striped table-hover">
+		<thead>
+			<th>
+				sl no
+			</th>
+			<th>
+				Image
+			</th>
+			<th>
+				User
+			</th>
+			<th>
+				Date Of Upload
+			</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="photo in photos">
+				<td>
+					{{photo.index}}
+				</td>
+				<td>					
+					<img ng-src="{{photo.src}}"/>
+				</td>
+				<td>
+					{{photo.info.owner.realname}}
+				</td>
+				<td>
+					{{photo.info.dates.posted}}
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
